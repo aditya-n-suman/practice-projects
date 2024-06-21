@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Custom Video Player</title>
+    <link
+      href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"
+      rel="stylesheet"
+      integrity="sha384-wvfXpqpZZVQGK6TAh5PVlGOfQNHSoD2xbE+QkPxCAFlNEevoEH3Sl0sibVcOQVnN"
+      crossorigin="anonymous"
+    />
+  </head>
+  <body class="min-h-screen p-8 bg-gradient-to-t from-white to-gray-500">
+    <h1>Custom Video Player</h1>
+    <div class="flex w-1/2 flex-col shadow-md bg-white rounded-lg">
+      <video
+        src="videos/sample.mp4"
+        controls
+        id="video"
+        preload="metadata"
+        class="aspect-video pt-4"
+        poster="img/poster.png"
+      ></video>
+      <div class="flex items-center gap-4 border-t-2 p-4 px-6 bg-gray-200 rounded-b-lg">
+        <button class="w-7" id="play">
+          <i class="fa fa-play fa-2x"></i>
+          <i style="display: none;" class="fa fa-pause fa-2x"></i>
+        </button>
+        <button class="btn" id="stop">
+          <i class="fa fa-stop fa-2x"></i>
+        </button>
+        <progress class="flex-1" id="progress" value="0" min="0"></progress>
+        <span class="timestamp" id="timestamp">00:00</span>
+      </div>
+    </div>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script src="script.js"></script>
+  </body>
+</html>
+
+<!-- https://developer.mozilla.org/en-US/docs/Learn/JavaScript/Client-side_web_APIs/Video_and_audio_APIs -->
