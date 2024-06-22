@@ -3,6 +3,7 @@ const playpause = document.getElementById("play");
 const stopBtn = document.getElementById("stop");
 const timestamp = document.getElementById("timestamp");
 const progress = document.getElementById("progress");
+const duration = document.getElementById("duration");
 
 video.controls = false;
 
@@ -45,7 +46,7 @@ const formattedTime = (time, isHourLong) => {
 const timeUpdateListener = () => {
 	if (!progress.getAttribute("max")) {
 		progress.setAttribute("max", video.duration);
-		console.log("duration is", video.duration);
+		duration.innerText = `/ ${formattedTime(video.duration)}`;
 	}
 	progress.value = video.currentTime;
 	timestamp.innerText = formattedTime(
@@ -57,7 +58,5 @@ const timeUpdateListener = () => {
 playpause.addEventListener("click", clickPlaypause);
 stopBtn.addEventListener("click", clickStop);
 video.addEventListener("click", clickPlaypause);
-video.addEventListener("playing", (e) => {});
-
 video.addEventListener("timeupdate", timeUpdateListener);
 progress.addEventListener("click", seekProgress);

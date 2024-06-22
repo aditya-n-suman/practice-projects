@@ -12,14 +12,16 @@
 			crossorigin="anonymous" />
 	</head>
 	<body class="min-h-screen p-8 bg-gradient-to-t from-white to-gray-500">
-		<h1>Custom Video Player</h1>
 		<div class="flex w-1/2 flex-col shadow-md bg-white rounded-lg">
+			<h1 class="text-center font-bold text-2xl bg-gray-200 rounded-t-lg py-2">
+				Custom Video Player
+			</h1>
 			<video
 				src="videos/sample.mp4"
 				controls
 				id="video"
 				preload="metadata"
-				class="aspect-video pt-4"
+				class="aspect-video"
 				poster="img/poster.png"></video>
 			<div
 				class="flex items-center gap-4 border-t-2 p-4 px-6 bg-gray-200 rounded-b-lg">
@@ -31,7 +33,10 @@
 					<i class="fa fa-stop fa-2x"></i>
 				</button>
 				<progress class="flex-1" id="progress" value="0" min="0"></progress>
-				<span class="timestamp" id="timestamp">00:00</span>
+				<div class="whitespace-nowrap">
+					<span class="timestamp" id="timestamp">00:00</span>
+					<span id="duration">/ 00:00</span>
+				</div>
 			</div>
 		</div>
 		<script src="https://cdn.tailwindcss.com"></script>
