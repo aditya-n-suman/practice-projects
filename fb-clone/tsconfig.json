@@ -1,0 +1,14 @@
+{
+  "include": ["src", "global.d.ts"],
+  "compilerOptions": {
+    "strict": true,
+    "noImplicitAny": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
+    "module": "ES2022",
+    "target": "ES2022",
+    "moduleResolution": "Bundler",
+    "noEmit": true,
+    "sourceMap": true
+  }
+}
