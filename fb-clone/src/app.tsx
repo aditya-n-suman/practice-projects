@@ -1,7 +1,10 @@
+import LandOnLogin from "./components/pages/landOnLogin";
+import './global.css';
+
 const App = () => {
   return (
-    <main>
-      <h1 className="text-3xl">Hi It's Ansh here</h1>
+    <main className="relative min-h-screen min-w-full">
+      <LandOnLogin />
     </main>
   );
 };

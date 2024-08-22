@@ -12,7 +12,7 @@ module.exports = {
   module: {
     rules: [
       {
-        test: /\.tsx?$/,
+        test: /\.[jt]sx?$/,
         use: "babel-loader",
         exclude: /node_modules/
       },
@@ -22,12 +22,12 @@ module.exports = {
       },
       {
         test: /\.(png|svg|jpg|jpeg|gif|woff|woff2|eot|ttf|otf)$/i,
-        use: "asset/resource"
+        use: "file-loader"
       }
     ]
   },
   resolve: {
-    extensions: [".tsx", ".ts", ".js"]
+    extensions: [".js", ".tsx", ".ts"]
   },
   devtool: "inline-source-map",
   devServer: {
